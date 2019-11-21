@@ -17,7 +17,7 @@ spec:
       containers:
       - name: busybox-nfs-container
         image: busybox 
-        command: ["/bin/ash", "-ec", "echo \"\" > /usr/share/busybox/index.html && while (true); do echo \"$(hostname) - $(date)<br>\" >> /usr/share/busybox/index.html && sleep 5 ; done"]
+        command: ["/bin/ash", "-ec", "echo \"\" > /usr/share/busybox/index.html && while (true); do echo \"$(hostname) - $(date)<br><br>\" >> /usr/share/busybox/index.html && sleep 5 ; done"]
         volumeMounts:
         - name: nfsvol-2 
           mountPath: /usr/share/busybox  
